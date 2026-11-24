@@ -1,6 +1,6 @@
 {
-  "name": "@cytocausal/perspectiva",
-  "version": "0.0.0",
+  "name": "perspectiva",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,12 +9,13 @@
     "start": "next start -p 3100",
     "typecheck": "tsc --noEmit",
     "import-data": "node scripts/import-data.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "check": "npm run typecheck && npm run build"
   },
   "dependencies": {
-    "@cytocausal/core": "*",
-    "@cytocausal/cytoscape": "*",
-    "@cytocausal/react": "*",
+    "@cytocausal/core": "https://github.com/SonghaiFan/cytocausal/releases/download/v0.1.0-alpha.1/cytocausal-core-0.1.0-alpha.1.tgz",
+    "@cytocausal/cytoscape": "https://github.com/SonghaiFan/cytocausal/releases/download/v0.1.0-alpha.1/cytocausal-cytoscape-0.1.0-alpha.1.tgz",
+    "@cytocausal/react": "https://github.com/SonghaiFan/cytocausal/releases/download/v0.1.0-alpha.1/cytocausal-react-0.1.0-alpha.1.tgz",
     "@tailwindcss/postcss": "^4.3.4",
     "cytoscape": "3.31.0",
     "next": "^16.4.5",
@@ -24,10 +25,18 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1",
-    "@types/cytoscape": "^3.21.8",
+    "@types/cytoscape": "3.21.8",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "overrides": {
+    "@cytocausal/core": "$@cytocausal/core",
+    "@cytocausal/cytoscape": "$@cytocausal/cytoscape",
+    "@cytocausal/react": "$@cytocausal/react"
   }
 }

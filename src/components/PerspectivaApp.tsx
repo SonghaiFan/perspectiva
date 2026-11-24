@@ -54,7 +54,7 @@ const datasets = datasetsJson as CausalDataset[];
 const VIEWS = ["Compare", "Single"] as const;
 // Force layouts keep anchored nodes comparable between versions, so only those are offered
 const LAYOUTS = ["cola", "fcose"] as const;
-const DOCS_URL = `${process.env.NEXT_PUBLIC_DOCS_URL ?? "http://localhost:3200"}/en/case-perspectiva/`;
+const DOCS_URL = `${process.env.NEXT_PUBLIC_DOCS_URL ?? "https://cytocausal.songhai.site"}/en/case-perspectiva/`;
 
 const WORKSHOP = "workshop";
 const COMBINED_LOOPS = { maxLength: 6 };

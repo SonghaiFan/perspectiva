@@ -37,7 +37,6 @@
     "scripts/**/*.ts",
     "playwright.config.ts",
     ".next/types/**/*.ts",
-    "../../packages/cytoscape/src/extensions.d.ts",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
